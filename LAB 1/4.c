@@ -7,6 +7,12 @@ void SWAP(int *n1, int *n2) {
     *n2 = temp;
 }
 
+void rotate (int *a, int *b, int *c){
+    SWAP(a,c);
+    SWAP(b,c);
+
+}
+
 
 int main() {
 
@@ -15,13 +21,8 @@ int main() {
     printf("Enter a, b and c respectively: ");
     scanf("%d %d %d", &a, &b, &c);
 
-    SWAP(&a,&c);
-    SWAP(&b,&a);
-    SWAP(&a,&c);
-    SWAP(&b,&a);
-
-
-
+    rotate(&a,&b,&c);
+    
     printf("Value after swapping:\n");
     printf("a = %d \nb = %d \nc = %d", a, b, c);
 

@@ -18,7 +18,7 @@ int main(){
 	for ( p = 0; p < n; ++p) 
     {
  
-      for (q = q + 1; q < n; ++q)
+      for (q = p + 1; q < n; ++q)
       {
  
         if (A[p] > A[q]) 
