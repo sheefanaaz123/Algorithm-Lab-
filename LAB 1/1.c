@@ -24,9 +24,9 @@ int main(void)
     for(i=1; i<n; i++)
     {
          if(min>randArray[i])
-		  min=randArray[i];   
-		 if(max<randArray[i])
-		  max=randArray[i];       
+		        min=randArray[i];   
+		     if(max<randArray[i])
+		        max=randArray[i];       
     }
    printf("\nMIN: %d",min);
    printf("\nMAX: %d",max);

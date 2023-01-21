@@ -1,51 +1,35 @@
-#include<stdio.h>
-
-void swap(int *a, int *b)
-{
-	int temp = *a;
-	*a = *b;
-	*b = temp;
-}
-
-void segregateEvenOdd(int arr[], int size)
-{
-	
-	int left = 0, right = size-1;
-	while (left < right)
-	{
-		
-		while (arr[left]%2 == 0 && left < right)
-			left++;
-
-		
-		while (arr[right]%2 == 1 && left < right)
-			right--;
-
-		if (left < right)
-		{
-			
-			swap(&arr[left], &arr[right]);
-			left++;
-			right--;
-		}
-	}
-}
-
-
-
-
-
-int main()
-{
-	int arr[] = {12, 34, 45, 9, 8, 90, 3};
-	int arr_size = sizeof(arr)/sizeof(arr[0]);
-	int i = 0;
-
-	segregateEvenOdd(arr, arr_size);
-
-	printf("Array after segregation ");
-	for (i = 0; i < arr_size; i++)
-		printf("%d ", arr[i]);
-
-	return 0;
-}
+#include<stdio.h>  
+#define N 10  
+  
+int main()  
+{  
+    int a[N], i, j = N, temp;  
+  
+    printf("Enter %d integer numbers\n", N);  
+    for(i = 0; i < N; i++)  
+        scanf("%d", &a[i]);  
+  
+    for(i = 0; i <= j; i++)  
+    {  
+        if(a[i] % 2 != 0)  
+        {  
+            while(j > i)  
+            {  
+                j--;  
+                if(a[j] % 2 == 0)  
+                {  
+                    temp = a[i];  
+                    a[i] = a[j];  
+                    a[j] = temp;  
+                    break;  
+                }  
+            }  
+        }    
+    }  
+  
+    printf("\nAfter re-arranging even and odd elements ...\n");  
+    for(i = 0; i < N; i++)  
+        printf("%d\n", a[i]);  
+  
+    return 0;  
+}  
