@@ -1,7 +1,35 @@
-//Write a program to find out the second smallest and second largest
-//element stored in an array of n integers. n is the user input. The array
-//takes input through random number generation within a given range.
-//How many ways you can solve this problem? Write your approaches &
-//strategy for solving this problem
+#include <stdio.h>
+#include <stdlib.h>
 
-#
+int main(void)
+{
+   int n;
+   printf("Enter the size of array ");
+   scanf("%d",&n);
+
+   int randArray[n],i;
+
+   for(i=0;i<n;i++)
+     randArray[i]=rand();   
+
+   printf("\nElements of the array::");
+   for(i=0;i<n;i++)
+   {
+     printf("%d  ",randArray[i]);
+   }
+
+   int min,max;
+
+   min=max=randArray[0];
+    for(i=1; i<n; i++)
+    {
+         if(min>randArray[i])
+		        min=randArray[i];   
+		     if(max<randArray[i])
+		        max=randArray[i];       
+    }
+   printf("\nMIN: %d",min);
+   printf("\nMAX: %d",max);
+   return 0;
+}
+

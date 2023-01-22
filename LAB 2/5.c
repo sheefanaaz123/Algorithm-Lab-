@@ -1,6 +1,3 @@
-//Write a program to swap pair of elements of an array of n integers from
-//starting. If n is odd, then last number will remain unchanged.
-
 #include <stdio.h>
 
 int main(){

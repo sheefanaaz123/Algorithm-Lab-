@@ -1,8 +1,3 @@
-//Write a program to display an array of n integers (n>1), where at every
-//index of the array should contain the product of all elements in the array
-//except the element at the given index. Solve this problem by taking single
-//loop and without an additional array
-
 #include <stdio.h>
  
 void Product(int arr[], int n)
